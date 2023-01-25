@@ -207,7 +207,7 @@ main {
         .form-right {
           display: flex;
           flex: 0.15;
-          justify-content: space-around;
+          justify-content: flex-start;
           align-items: center;
 
           .icon .clip {
@@ -230,11 +230,11 @@ main {
           padding-left: 5px;
           margin: 0 0.5rem;
           flex: 1;
-          border-bottom: 2px solid transparent;
+          border-bottom: 2px solid rgb(80, 78, 78);
           transition: all 0.2s ease-in-out;
 
           &:focus {
-            border-bottom: 2px solid rgb(80, 78, 78);
+            border-bottom: 2px solid rgb(43, 92, 57);
           }
         }
 
@@ -252,7 +252,7 @@ main {
           justify-content: space-between;
           font-size: 16px;
           opacity: 0.8;
-
+          margin-left: 14px;
           &:hover {
             opacity: 1;
           }

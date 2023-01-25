@@ -10,13 +10,13 @@
     
     .form-container {
         width : 24rem;
-        height : 400px;
+        height : 300px;
         margin: auto;
         background: #fff;
         border-radius: 5px;
         display : flex;
         justify-content: center;
-        align-items:center;
+        align-items:flex-start;
         font-family: 'Poppins' ,sans-serif;
 
         .form-body {
