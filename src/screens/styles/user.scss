@@ -1,0 +1,69 @@
+.container {
+    width : 100%;
+    height : 100vh;
+    background: url(https://telegram.org/img/tgme/pattern.svg?1);
+    background-repeat: repeat;
+    background-position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .form-container {
+        width : 24rem;
+        height : 400px;
+        margin: auto;
+        background: #fff;
+        border-radius: 5px;
+        display : flex;
+        justify-content: center;
+        align-items:center;
+        font-family: 'Poppins' ,sans-serif;
+
+        .form-body {
+            height : 200px;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .form {
+            display:flex;
+            flex-direction: column;
+        }
+
+        input[type="text"] {
+            padding: 15px;
+            border: none;
+            outline: 1px solid #DEDEE6;
+            border: 1px solid #DEDEE6;
+            border-radius: 2px;
+            margin-top: 10px;
+            width : auto;
+
+            &:focus {
+                outline : 4px solid #DEDEE6;
+                transition: outline .2s linear;
+            }
+        }
+
+        button[type="submit"] {
+            background: linear-gradient(90deg, rgb(193, 93, 246) 0%, rgb(63, 4, 190) 100%);
+            border: none;
+            outline : 2px solid rgb(114, 90, 248);
+            padding: 1rem;
+            color: #fff;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 15px;   
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-family: 'Poppins' ,sans-serif;
+        }
+    }
+
+    @media screen and (max-width : 400px) {
+        .form-container {
+            left : 0;
+            margin: 2rem 0;
+        }
+    }
+}
