@@ -5,14 +5,12 @@ import {useNavigate} from 'react-router-dom';
 
 function User() {
     const [name, setname] = useState('');
-    const [usernameAlreadySelected , setusernameAlreadySelected ] = useState(false);
     const navigate = useNavigate();
   
 // handle form submission
   function handleSubmit(e) {
     e.preventDefault();
 
-    setusernameAlreadySelected(true);
     socket.auth = {username : name};
   
     setname('');
