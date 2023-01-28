@@ -2,11 +2,16 @@ import { io } from "socket.io-client";
 
 const socket = io(
     'http://localhost:8080',
-     {
-        autoConnect : false,
+    {
+        autoConnect: false,
         transports: ["websocket", "polling"]
     }
- );
+);
+
+socket.on("connect_error", () => {
+    // revert to classic upgrade
+    socket.io.opts.transports = ["polling", "websocket"];
+});
 
 socket.onAny((event, ...args) => {
     console.log(event, args);
