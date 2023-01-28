@@ -4,6 +4,7 @@ const socket = io(
     'http://localhost:8080',
      {
         autoConnect : false,
+        transports: ["websocket", "polling"]
     }
  );
 
