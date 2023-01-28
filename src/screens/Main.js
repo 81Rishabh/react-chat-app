@@ -74,8 +74,7 @@ function Main() {
                 // console.log(content);
                 for (let i = 0; i < Users.length; i++) {
                     if (Users[i].userId === from) {
-                        // user.prtotype.message = [];
-
+                        // decrpt message
                         const decrypt_message = decrypt(content , key);
                         Users[i].messages.push({
                             content : decrypt_message,
@@ -83,9 +82,7 @@ function Main() {
                             to
                         });
 
-                        if (Users[i].userId !== selectedId) {
-                            Users[i].hasMessages = true
-                        }
+                        if (Users[i].userId !== selectedId) {Users[i].hasMessages = true}
                         sethasMessageRecieved(true);
                         break;
                     }

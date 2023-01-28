@@ -47,7 +47,12 @@ function ChatContainer() {
 
   // decrypt message
   const decryptedMesssage = (message) => {
-    return decrypt(message.content, message.key);
+    if(message.hasOwnProperty('key')) {
+      return decrypt(message.content, message.key);
+    }
+    else {
+      return message.content;
+    }
   }
 
 
