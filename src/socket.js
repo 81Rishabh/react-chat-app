@@ -4,8 +4,7 @@ const URL = 'http://localhost:8080';
 
 const socket = io(URL , {
     autoConnect : false,
-    transports : ['websocket'],
-    upgrade : false
+    transports : ['polling'],
 });
 
 socket.onAny((event, ...args) => {
