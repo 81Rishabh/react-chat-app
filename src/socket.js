@@ -1,7 +1,8 @@
 import { io } from "socket.io-client";
-const url = 'http://localhost:8080';
+// const url = 'https://chit-chat-server-7pqo.onrender.com';
+const local_url = 'http://localhost:8080';
 
-const socket = io(url , {autoConnect : false});
+const socket = io(local_url , {autoConnect : false});
 
 socket.on("connect_error", (err) => {
     console.log(err);
